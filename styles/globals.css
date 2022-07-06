@@ -14,303 +14,247 @@ a {
 * {
   box-sizing: border-box;
 }
-
-/* prettier-ignore */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.header {
+ text-align: center;
+ font-family: 'Roboto', sans-serif;
+ font-size: 34px;
+ margin-top: 12vh;
 }
 
-.gradient-bg {
-  background-color: #ffece2c9;
-  background-image: linear-gradient(56deg, #fff0e8 0%, #fff5db 100%);
+.footer {
+ text-align: center;
+ font-family: 'Lato', sans-serif;
+ font-weight: 300;
+ font-size: 20px;
+ margin-top: 15vh;
 }
 
-.praying-bg {
-  background-image: url("../public/img/praying-hands.webp");
-  background-size: cover;
-}
-.singing-bg {
-  background-image: url("../public/img/singing.webp");
-  background-size: cover;
-}
+.button-container-1 {
+ position: relative;
+ width: 100px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 6vh;
+ overflow: hidden;
+ border: 1px solid;
+ font-family: 'Lato', sans-serif;
+ font-weight: 300;
+ font-size: 20px;
+ transition: 0.5s;
+ letter-spacing: 1px;
+  border-radius: 8px;
 
-.post-list-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 20px 15px;
-  padding-top: 150px;
-}
-.container-ku{
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 20px 15px;
-  padding-top: 10px;
-}
+ button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
 
-.post {
-  max-width: 33%;
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 18px;
-  color: #272727;
+  @include button(#000,
+  "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+  2300%,
+  100%,
+  none,
+  #fff);
   cursor: pointer;
-  text-align: left;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+
+  &:hover {
+   -webkit-animation: ani 0.7s steps(22) forwards;
+   animation: ani 0.7s steps(22) forwards;
+  }
+ }
 }
 
-.post-img {
-  flex: 1;
-  margin-right: 20px;
-  margin-top: 5px;
-}
+.button-container-2 {
+ position: relative;
+ width: 100px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 7vh;
+ overflow: hidden;
+ border: 1px solid #000;
+ font-family: 'Lato', sans-serif;
+ font-weight: 300;
+ transition: 0.5s;
+ letter-spacing: 1px;
+ border-radius: 8px;
 
-.post-img img {
-  border: 1px solid #fafafa;
-  border-radius: 0px;
-}
-
-.post-img:hover {
-  transform: scale(1.01);
-  filter: brightness(0.75);
-}
-
-.post-details {
-  flex: 4.5;
-}
-
-.post-details .title {
-  font-size: 16px;
-  line-height: 28px;
+ button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
   font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 0px;
-}
 
-.post-details .excerpt {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  @include button(#000, "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+  3000%,
+  100%,
+  none,
+  #fff);
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
 
-.post-details .published-at {
-  font-size: 14px;
-  color: #5a5a5a;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-/* Blog Post */
-
-.post-container {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-  color: #2c2c2c;
-  border-top: 1px solid #dbdbdb;
-
-  
-}
-
-.post-content {
-  padding-top: 60px;
-  /* padding-left: 5px;
-  padding-right: 5px; */
-  max-width: 900px;
-  text-align: justify;
-  margin: 0 20px;
-  width: 100%;
-  padding: 10px;
-
-}
-
-.post-title {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 36px;
-  margin-bottom: 20px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.author-box {
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  font-size: 16px;
-  margin-bottom: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 24px;
-}
-.category {
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.author {
-  font-weight: 600;
-}
-
-.post-main-image {
-  margin-bottom: 20px;
-}
-
-.post-text p,
-.post-text li,
-.post-text h2,
-.post-text h3,
-.post-text blockquote {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-.post-text h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  line-height: 30px;
-}
-
-.post-text h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  line-height: 30px;
-}
-
-.post-text p {
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.post-text li {
-  font-size: 18px;
-  line-height: 28px;
-  margin-left: 20px;
-  list-style-type: disc;
-  margin-bottom: 15px;
-}
-
-blockquote {
-  font-size: 18px;
-  line-height: 28px;
-  margin: 0;
-  padding: 15px;
-  background: #eee;
-  border-radius: 5px;
-}
-
-blockquote p::before {
-  content: "\201C";
-}
-
-blockquote p::after {
-  content: "\201D";
-}
-@media screen and (max-width: 500px) {
-  .post-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1080px;
-    padding: 2px 5px;
-    padding-top: 20px;
-    margin-bottom: 20px;
-   
+  &:hover {
+   -webkit-animation: ani 0.7s steps(29) forwards;
+   animation: ani 0.7s steps(29) forwards;
   }
-  .container-ku{
-    margin-top: 50px;
- 
-  }
-  .blog-ku{
-    background-color: #fafafa;
-  }
-
-.post {
-
-  min-width: 350px;
-  height: 130px;
-  padding:10px;
-  background-color: #fff;
-  box-shadow:  0 0rem 0.2rem rgb(151, 150, 150); 
-  display: flex;
-  text-align: start;
-  
-
-}
-.post-img {
-  min-width: 220px;
-  max-width: 100px;
-  height: 120px;
-  /* transform: translateY(-6rem); */
-  position: relative;
-  object-fit: cover;
+ }
 }
 
-.post-img img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-  display: block;
-}
 
-.post-img::before {
-  content: "";
-    width: 100%;
-    height: 100%;
+.mas {
     position: absolute;
-    top: 0;
-    left: 0;
-    /* background: linear-gradient(
-      to right,
-      rgba(79, 172, 254, 0.8),
-      rgba(0, 242, 254, 0.8)
-    ); */
-    /* box-shadow: 0.1rem 0.1rem 1rem 0px rgba(0, 0, 0.05); */
-    /* border-radius: 0.8rem; */
-}
-
- .published-at {
-  font-size: 14px;
-  color: #5a5a5a;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  /* margin-left: 120px; */
-  text-align: center;
-
+    color: #000;
+    text-align: center;
+    width: 101%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    position: absolute;
+    font-size: 11px;
+    margin-top: 17px;
+    overflow: hidden;
+	  font-weight: bold;
 
 }
 
-.post-details .published-at {
-  font-size: 14px;
-  color: #5a5a5a;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    margin-left: 120px;
+@-webkit-keyframes ani {
+ from {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+ }
+
+ to {
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+ }
 }
-.post-details .title {
-  font-size: 16px;
-  line-height: 28px;
+
+@keyframes ani {
+ from {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+ }
+
+ to {
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+ }
+}
+
+@-webkit-keyframes ani2 {
+ from {
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+ }
+
+ to {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+ }
+}
+
+@keyframes ani2 {
+ from {
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+ }
+
+ to {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+ }
+}
+
+a{
+	color:#00ff95;
+}
+
+.button-container-3 {
+ position: relative;
+ width: 100px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 8vh;
+ overflow: hidden;
+ border: 1px solid #000;
+ font-family: 'Lato', sans-serif;
+ font-weight: 300;
+ transition: 0.5s;
+ letter-spacing: 1px;
+ border-radius: 8px;
+
+ button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
   font-weight: bold;
-  text-align: start;
-  margin-left: 190px;
-  margin-top: -120px;
+
+
+  @include button(#000, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+  7100%,
+  100%,
+  none,
+  #fff);
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+
+  &:hover {
+   -webkit-animation: ani 0.7s steps(70) forwards;
+   animation: ani 0.7s steps(70) forwards;
+  }
+ }
 }
-.respon{
-
-  width: fit-content;
+.typing-demo {
+  width: 20ch;
+  animation: typing 16s steps(21), blink .9s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  border-color: white;
+  font-size: 2em;
 }
 
-
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+.gradient {
+  background: linear-gradient(45deg, #536eec, #66c3dd,#e1664c,#d05c9c,#536eec,#66c3dd);
+  background-size: 300% 100%;
+  background-position: 0 0;
+  transition: background-position 1.5s;
+}
+.gradient:hover {
+  background-position: 100% 0;
+}
+.png{
+  background-image: url("/img/thumbnail7.jpg");
+  background-size: cover;
+}
+.jpg{
+  background-image: url("/img/thumbnail8.jpg");
+  background-size: cover;
+  
 }

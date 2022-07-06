@@ -5,60 +5,70 @@ import {
     Text,
     VStack,
     useBreakpointValue,
-    Center
-} from '@chakra-ui/react';
-import { transform } from 'framer-motion';
-import Image from 'next/image'
-import NextLink from 'next/link'
- 
+    Center,
+    Box,
+    HStack
+} from "@chakra-ui/react"
+import { AiOutlineWhatsApp, AiOutlineArrowDown } from "react-icons/ai"
+import Browsur from "./Browsur"
 export default function WithBackgroundImage() {
     return (
         <Flex
-            w={'full'}
-            h={'100vh'}
-            backgroundImage={
-                'url("/img/church.jpg")'
-            }
-            backgroundSize={'cover'}
-            backgroundPosition={'center center'}
+            w={"full"}
+            h={"100vh"}
+            backgroundImage={'url("/img/thumbnail6.jpg")'}
+            backgroundSize={"cover"}
+            backgroundPosition={"center center"}
         >
             <VStack
-                w={'full'}
-                justify={'center'}
+                w={"full"}
+                justify={"center"}
                 px={useBreakpointValue({ base: 4, md: 8 })}
-                bgGradient={'linear(to-r, blackAlpha.500, transparent)'} 
-                 >
-                <Stack maxW={'2xl'} align={'center'} spacing={1}
-            //    position={'fixed'} zIndex={1}
+                bgGradient={"linear(to-r, blackAlpha.100, transparent)"}
+            >
+                <Stack
+                    maxW={"2xl"}
+                    align={"center"}
+                    spacing={1}
+                    // position={"fixed"}
+                    // zIndex={1}
+                    mt={24}
                 >
                     <Center>
                         <Text
-                            color={'white'}
-                            _hover={{color: 'black' }}
-                            fontWeight={700}
-                            lineHeight={1.2}
-                            fontSize={useBreakpointValue({ base: '4xl', md: '6xl' })}
-                            align={'center'}
+                            color={"white"}
+                            fontWeight={200}
+                            lineHeight={6.9}
+                            fontSize={useBreakpointValue({ base: "xl", md: "4xl" })}
+                            align={"center"}
                         >
-                        GSPDI 
+                            your best music skill partner
                         </Text>
                     </Center>
-                    <Stack w={{base: '200px', md: '500px'}}>
+                    {/* <Stack w={{base: '200px', md: '500px'}}>
                     <Image priority alt='' src={'/img/filadelfia.png'} width='300' height='150'/>
-                    </Stack>
-                    <Flex justifyContent={'center'}  py={{ base: '0', md: '15' }}>
-                        <Button
-                            bg={'blackAlpha.800'}
-                            rounded={'full'}
-                            color={'whiteAlpha.700'}
-                            _hover={{ bg: 'yellow.400' }}
-                            href='/#katasambutan'
-                        >
-                            Baca Lebih Lanjut
-                        </Button>
-                    </Flex>
+                    </Stack> */}
+                    <HStack justifyContent={'center'} align={'center'}>
+                        <Flex direction={{ base: "column", md: "row" }} py={{ base: "0", md: "0" }}>
+                            <Box mt={4}>
+                                <Button
+                                    bg={"blackAlpha.800"}
+                                    rounded={"full"}
+                                    color={"whiteAlpha.700"}
+                                    _hover={{ bg: "green.600" }}
+                                    href="/#katasambutan"
+                                    p={6}
+                                >
+                                    <AiOutlineWhatsApp size={32} /> <b /> Daftar Sekarang
+                                </Button>
+                            </Box>
+                            <Box mt={4}>
+                                <Browsur/>
+                            </Box>
+                        </Flex>
+                    </HStack>
                 </Stack>
             </VStack>
         </Flex>
-    );
-} 
+    )
+}

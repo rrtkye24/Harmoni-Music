@@ -31,7 +31,7 @@ function NavButton({ href, text }) {
         color="black"
         _hover={{ bg: "whiteAlpha.400" }}
         _focus={{ boxShadow: "outline" }}
-        my={5}
+        my={2}
       >
         {text}
       </Button>
@@ -39,14 +39,14 @@ function NavButton({ href, text }) {
   )
 }
 
-function LogoGSPDI({ isOpen }){
+function LogoHarmony({ isOpen }){
   return (
     <NextLink href={"/"} passHref>
       <HStack id="menu-left">
-        <Image src={Logo.src} h={isOpen ? "30px" : "50px"} alt="logo" />
-        <Text textAlign="start" fontSize="xl" color="black">
-          <Text as="b">{"GSPDI"}</Text>
-          Church
+        <Image rounded={'full'} src={Logo.src} h={isOpen ? "40px" : "40px"} alt="logo" />
+        <Text textAlign="start" fontSize="l" color="black">
+          <Text as="b">{"Harmony"}</Text>
+          Music
         </Text>
       </HStack>
     </NextLink>
@@ -64,17 +64,17 @@ export default function NavigationBar() {
       as="nav"
       w="100%"
       px="6"
-      py="1"
+      py=""
       mr={4}
       zIndex={9999}
       align="center"
       justify="space-between"
       position="fixed"
-      bg={semiTransparentWhite}
-      backdropFilter="blur(4px)"
-      borderBottom={"1px solid #f8f8f8"}
+      bg={'rgba(255,255,255,0.3)'}
+      backdropFilter="blur(1px)"
+      // borderBottom={"1px solid #ffffff"}
     >
-      <LogoGSPDI isOpen={isOpen} />
+      <LogoHarmony isOpen={isOpen} />
 
       <Flex
         alignItems={"center"}
@@ -85,11 +85,10 @@ export default function NavigationBar() {
         mr={4}
         id="menu-right"
       >
-        <NavButton href="/" text="Beranda" />
-        <NavButton href="/about" text="Tentang Kita" />
-        <NavButton href="/blog" text="Blog" />
-        <NavButton href="/struktur" text="Struktur" />
-        <NavButton href="/contact" text="Hubungi Kami" />
+        <NavButton className="button-container-3" href="/" text="Home" />
+        <NavButton className="button-container-3" href="/about" text="Tentang Kami" />
+        <NavButton className="button-container-3" href="/daftar" text="Pendaftaran" />
+        <NavButton className="button-container-3" href="/contact" text="Kontak" />
       </Flex>
 
       <IconButton
@@ -110,7 +109,7 @@ export default function NavigationBar() {
           align="left"
           color="black"
           position={"fixed"}
-          mt={170}
+          mt={160}
           bg="rgba(255,255,255,0.86)"
           w={"full"}
         >
@@ -130,66 +129,7 @@ export default function NavigationBar() {
               </NextLink>
             </Center>
             <Center w="100%"h="24px">
-              <Menu>
-                <MenuButton>
-                  <Button
-                    as="a"
-                    fontSize={16}
-
-                    _hover={{ bg: "whiteAlpha.400" }}
-                    _focus={{ boxShadow: "outline" }}
-                    variant="ghost"
-                    aria-label="About"
-                    rightIcon={<ChevronDownIcon />}
-                  >
-                    Tentang Kami
-                  </Button>
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>
-                    <NextLink href="/about/#visimisi" passHref>
-                      <Button
-                        fontSize={16}
-                        as="a"
-                        aria-label="visi-misi"
-                        colorScheme="teal"
-                        variant="ghost"
-                      >
-                        Visi & Misi
-                      </Button>
-                    </NextLink>
-                  </MenuItem>
-                  <MenuItem>
-                    <NextLink href="/about/#sejarah" passHref>
-                      <Button
-                        fontSize={16}
-                        as="a"
-                        aria-label="sejara"
-                        colorScheme="teal"
-                        variant="ghost"
-                      >
-                        Sejarah
-                      </Button>
-                    </NextLink>
-                  </MenuItem>
-                  <MenuItem>
-                    <NextLink href="/struktur" passHref>
-                      <Button
-                        as="a"
-                        fontSize={16}
-                        aria-label="struktur"
-                        colorScheme="teal"
-                        variant="ghost"
-                      >
-                        Struktur Organisasi
-                      </Button>
-                    </NextLink>
-                  </MenuItem>
-                </MenuList>
-              </Menu>
-            </Center>
-            <Center w="100%"h="24px">
-              <NextLink href="/blog" passHref>
+              <NextLink href="/about" passHref>
                 <Button
                   as="a"
                   fontSize={16}
@@ -198,7 +138,21 @@ export default function NavigationBar() {
                   _focus={{ boxShadow: "outline" }}
                   variant="ghost"
                 >
-                  Kegiatan
+                  Tentang Kami
+                </Button>
+              </NextLink>
+            </Center>
+            <Center w="100%"h="24px">
+              <NextLink href="/daftar" passHref>
+                <Button
+                  as="a"
+                  fontSize={16}
+                  aria-label="visi-misi"
+                  _hover={{ bg: "whiteAlpha.400" }}
+                  _focus={{ boxShadow: "outline" }}
+                  variant="ghost"
+                >
+                  Pendaftaran
                 </Button>
               </NextLink>
             </Center>
@@ -212,7 +166,7 @@ export default function NavigationBar() {
                   _focus={{ boxShadow: "outline" }}
                   variant="ghost"
                 >
-                  Hubungi Kami
+                 Kontak
                 </Button>
               </NextLink>
             </Center>
