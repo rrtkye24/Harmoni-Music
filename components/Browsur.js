@@ -10,6 +10,7 @@ import {
     Button,
     useDisclosure,
     Image,
+    Link
 } from '@chakra-ui/react'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 export function Browsur() {
@@ -27,8 +28,8 @@ export function Browsur() {
             >
                 <AiOutlineArrowDown size={28} /> Pilih Instrument
             </Button>
-            <Modal  isOpen={isOpen} onClose={onClose} motionPreset='slideInBottom' isCentered
-size={'xs'}>
+            <Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInBottom' isCentered
+                size={'xs'}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalCloseButton />
@@ -37,10 +38,19 @@ size={'xs'}>
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
-                            Mau Ikut !
-                        </Button>
+                        <Link
+                        href="https://wa.me/6281271886601?text=Hallo%20,saya%20telah%20mengunjungi%20website%20Harmony%20Music%20dan%20tertarik%20untuk%20mendaftar%20dan%20bergabung%20bersama%20Harmony%20Music"
+                        target="_blank"
+                        >
+                            <Button colorScheme='blue' mr={3}>
+                                Mau Ikut !
+                            </Button>
+                        </Link>
+                        <Link
+                        href='#program'
+                        >
                         <Button variant='ghost'>Pilih Instrument</Button>
+                        </Link>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

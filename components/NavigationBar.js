@@ -39,7 +39,7 @@ function NavButton({ href, text }) {
   )
 }
 
-function LogoHarmony({ isOpen }){
+function LogoHarmony({ isOpen }) {
   return (
     <NextLink href={"/"} passHref>
       <HStack id="menu-left">
@@ -104,79 +104,84 @@ export default function NavigationBar() {
       />
       {isOpen ? (
         <Box
-        display={{ md: "none" }}
+          display={{ md: "none" }}
           width={"full"}
           position={"absolute"}
           top={"47px"}
           left={0}
-          background={'whiteAlpha.400'}
+          background={'whiteAlpha.700'}
           backdropFilter="blur(20px)"
-         
+
         >
           <VStack>
-              <NextLink href="/" passHref>
-                <Button
-                  as="a"
-                  fontSize={16}
-                  aria-label="beranda"
-                  _hover={{ bg: "whiteAlpha.400" }}
-                  _focus={{ boxShadow: "outline" }}
-                  variant="ghost"
-                >
-                  Beranda
-                </Button>
-              </NextLink>
-              <NextLink href="#tentang" passHref>
-                <Button
-                  as="a"
-                  fontSize={16}
-                  aria-label="tentag"
-                  _hover={{ bg: "whiteAlpha.400" }}
-                  _focus={{ boxShadow: "outline" }}
-                  variant="ghost"
-                >
-                  Tentang Kami
-                </Button>
-              </NextLink>
-           
-              <NextLink href="#keuntungan" passHref>
-                <Button
-                  as="a"
-                  fontSize={16}
-                  aria-label="tentang"
-                  _hover={{ bg: "whiteAlpha.400" }}
-                  _focus={{ boxShadow: "outline" }}
-                  variant="ghost"
-                >
-                  Keuntungan
-                </Button>
-              </NextLink>
-           
-              <NextLink href="#program" passHref>
-                <Button
-                  as="a"
-                  fontSize={16}
-                  aria-label="program"
-                  _hover={{ bg: "whiteAlpha.400" }}
-                  _focus={{ boxShadow: "outline" }}
-                  variant="ghost"
-                >
-                 Program
-                </Button>
-              </NextLink>
-           
-              <NextLink href="#kontak" passHref>
-                <Button
-                  as="a"
-                  fontSize={16}
-                  aria-label="kontak"
-                  _hover={{ bg: "whiteAlpha.400" }}
-                  _focus={{ boxShadow: "outline" }}
-                  variant="ghost"
-                >
-                 Kontak
-                </Button>
-              </NextLink>
+            <NextLink href="/" passHref>
+              <Button
+                as="a"
+                fontSize={14}
+                aria-label="beranda"
+                _hover={{ bg: "whiteAlpha.400" }}
+                _focus={{ boxShadow: "outline" }}
+                variant="ghost"
+              >
+                <Text as='b'>
+                  Beranda</Text>
+              </Button>
+            </NextLink>
+            <NextLink href="#tentang" passHref>
+              <Button
+                as="a"
+                fontSize={14}
+                aria-label="tentag"
+                _hover={{ bg: "whiteAlpha.400" }}
+                _focus={{ boxShadow: "outline" }}
+                variant="ghost"
+              >
+                <Text as='b'>Tentang Kami</Text>
+              </Button>
+            </NextLink>
+
+            <NextLink href="#keuntungan" passHref>
+              <Button
+                as="a"
+                fontSize={14}
+                aria-label="tentang"
+                _hover={{ bg: "whiteAlpha.400" }}
+                _focus={{ boxShadow: "outline" }}
+                variant="ghost"
+              >
+                <Text as='b'>Keuntungan</Text>
+              </Button>
+            </NextLink>
+
+            <NextLink href="#program" passHref>
+              <Button
+                as="a"
+                fontSize={14}
+                aria-label="program"
+                _hover={{ bg: "whiteAlpha.400" }}
+                _focus={{ boxShadow: "outline" }}
+                variant="ghost"
+              >
+                <Text as='b'>
+                  Program
+                </Text>
+              </Button>
+            </NextLink>
+
+            <NextLink href="#kontak" passHref>
+              <Button
+                as="a"
+                fontSize={14}
+                aria-label="kontak"
+                _hover={{ bg: "whiteAlpha.400" }}
+                _focus={{ boxShadow: "outline" }}
+                variant="ghost"
+              >
+                <Text as='b'>
+                  Kontak
+                </Text>
+              </Button>
+            </NextLink>
           </VStack>
         </Box>
       ) : null}

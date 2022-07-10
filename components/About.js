@@ -13,7 +13,8 @@ import {
     Stack,
     Container,
     SimpleGrid,
-    Heading
+    Heading,
+    Link
 } from "@chakra-ui/react"
 import { AiOutlineWhatsApp, AiOutlineArrowDown } from "react-icons/ai"
 import NextLink from "next/link"
@@ -39,7 +40,7 @@ function Video() {
             </Box>
             <Box align='center' lineHeight={2.4}>
                 <Heading>Sedikit Cerita</Heading>
-                <Text mt={10} fontSize={{base: 12, md: 18}}>Harmony music baru dirintis pada tahun 2022 dan ditempatkan di Kota Bengkulu Sumatera, tujuan dari adanya les musik ini untuk membentuk, mengembangkan, dan melatih skill musikalitas dan akan sangat menjamin kualitas musikalitas anda </Text>
+                <Text mt={10} fontSize={{ base: 12, md: 18 }}>Harmony music baru dirintis pada tahun 2022 dan ditempatkan di Kota Bengkulu Sumatera, tujuan dari adanya les musik ini untuk membentuk, mengembangkan, dan melatih skill musikalitas dan akan sangat menjamin kualitas musikalitas anda </Text>
             </Box>
         </Stack>
     )
@@ -76,16 +77,21 @@ export default function About() {
                         </Box>
                         <Tentangkami />
                         <Center>
-                            <Button
-                                bg={"green.300"}
-                                rounded={"full"}
-                                color={"whiteAlpha.800"}
-                                _hover={{ bg: "green.600" }}
-                                href="/#katasambutan"
-                                p={6}
+                            <Link
+                                href='https://wa.me/6281271886601?text=Hallo%20,saya%20telah%20mengunjungi%20website%20Harmony%20Music%20dan%20tertarik%20untuk%20mendaftar%20dan%20bergabung%20bersama%20Harmony%20Music'
+                                target="_blank"
                             >
-                                <AiOutlineWhatsApp size={32} />  Daftar Sekarang
-                            </Button>
+                                <Button
+                                    bg={"green.300"}
+                                    rounded={"full"}
+                                    color={"whiteAlpha.800"}
+                                    _hover={{ bg: "green.600" }}
+                                    href="/#katasambutan"
+                                    p={6}
+                                >
+                                    <AiOutlineWhatsApp size={32} />  Daftar Sekarang
+                                </Button>
+                            </Link>
                         </Center>
                     </Container>
                 </Box>

@@ -115,19 +115,19 @@ export default function Footer() {
                                         <ListHeader>@harmonymusic_bengkulu</ListHeader>
                                     </Flex>
                                     <Flex>
-                                        <SocialButton label={"Twitter"} href={"mailto:"}>
+                                        <SocialButton label={"Gmail"} href={"/"}>
                                             <AiOutlineMail size={32} />
                                         </SocialButton>
                                         <ListHeader>harmonymusic@gmail.com</ListHeader>
                                     </Flex>
                                     <Flex>
-                                        <SocialButton label={"YouTube"} href={"youtube.com"}>
+                                        <SocialButton label={"YouTube"} href={"/"}>
                                             <FaYoutube size={32} />
                                         </SocialButton>
                                         <ListHeader>harmonymusic</ListHeader>
                                     </Flex>
                                     <Flex>
-                                        <SocialButton label={"Facebook"} href={"facebook.com"}>
+                                        <SocialButton label={"Facebook"} href={"/"}>
                                             <FaFacebook size={32} />
                                         </SocialButton>
                                         <ListHeader>harmonymusic_bkl</ListHeader>

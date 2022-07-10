@@ -106,21 +106,21 @@ export default function Benefit() {
                             </Testimonial>
                             <Testimonial>
                                 <TestimonialContent>
+                                    <TestimonialHeading>50% OFF</TestimonialHeading>
+                                    <TestimonialText>
+                                        diskon biaya pendaftaran sebesar 50% sampai akhir July 2022
+                                    </TestimonialText>
+                                </TestimonialContent>
+                                <Icons icon={<TbDiscount2 size={38} />} />
+                            </Testimonial>
+                            <Testimonial>
+                                <TestimonialContent>
                                     <TestimonialHeading>Best Teacher</TestimonialHeading>
                                     <TestimonialText>
                                         Pengajar yang asik dan kompeten dalam bidangnya
                                     </TestimonialText>
                                 </TestimonialContent>
                                 <Icons icon={<FcBusinesswoman size={38} />} />
-                            </Testimonial>
-                            <Testimonial>
-                                <TestimonialContent>
-                                    <TestimonialHeading>50% OFF</TestimonialHeading>
-                                    <TestimonialText>
-                                        diskon biaya pendaftaran sebesar 50%
-                                    </TestimonialText>
-                                </TestimonialContent>
-                                <Icons icon={<TbDiscount2 size={38} />} />
                             </Testimonial>
                         </Stack>
                         <Stack
