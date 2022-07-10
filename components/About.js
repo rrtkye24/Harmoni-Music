@@ -60,7 +60,7 @@ function Tentangkami() {
 }
 export default function About() {
     return (
-        <Box p={10} className='png'>
+        <Box p={10} className='png' id="tentang">
             <Center>
                 <Box>
                     <Container maxW={'5xl'} as={Stack} spacing={5}>

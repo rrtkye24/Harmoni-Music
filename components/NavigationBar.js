@@ -72,7 +72,6 @@ export default function NavigationBar() {
       position="fixed"
       bg={'rgba(255,255,255,0.3)'}
       backdropFilter="blur(1px)"
-      // borderBottom={"1px solid #ffffff"}
     >
       <LogoHarmony isOpen={isOpen} />
 
@@ -85,10 +84,11 @@ export default function NavigationBar() {
         mr={4}
         id="menu-right"
       >
-        <NavButton className="button-container-3" href="/" text="Home" />
-        <NavButton className="button-container-3" href="/about" text="Tentang Kami" />
-        <NavButton className="button-container-3" href="/daftar" text="Pendaftaran" />
-        <NavButton className="button-container-3" href="/contact" text="Kontak" />
+        <NavButton className="button-container-3" href="/" text="Beranda" />
+        <NavButton className="button-container-3" href="#tentang" text="Tentang Kami" />
+        <NavButton className="button-container-3" href="#keuntungan" text="Keuntungan" />
+        <NavButton className="button-container-3" href="#program" text="Program" />
+        <NavButton className="button-container-3" href="#kontak" text="Kontak" />
       </Flex>
 
       <IconButton
@@ -104,22 +104,21 @@ export default function NavigationBar() {
       />
       {isOpen ? (
         <Box
-          display={{ md: "none" }}
-          ml={-6}
-          align="left"
-          color="black"
-          position={"fixed"}
-          mt={160}
-          bg="rgba(255,255,255,0.86)"
-          w={"full"}
+        display={{ md: "none" }}
+          width={"full"}
+          position={"absolute"}
+          top={"47px"}
+          left={0}
+          background={'whiteAlpha.400'}
+          backdropFilter="blur(20px)"
+         
         >
-          <VStack alignItems="left">
-            <Center w="100%"h="24px">
+          <VStack>
               <NextLink href="/" passHref>
                 <Button
                   as="a"
                   fontSize={16}
-                  aria-label="visi-misi"
+                  aria-label="beranda"
                   _hover={{ bg: "whiteAlpha.400" }}
                   _focus={{ boxShadow: "outline" }}
                   variant="ghost"
@@ -127,13 +126,11 @@ export default function NavigationBar() {
                   Beranda
                 </Button>
               </NextLink>
-            </Center>
-            <Center w="100%"h="24px">
-              <NextLink href="/about" passHref>
+              <NextLink href="#tentang" passHref>
                 <Button
                   as="a"
                   fontSize={16}
-                  aria-label="visi-misi"
+                  aria-label="tentag"
                   _hover={{ bg: "whiteAlpha.400" }}
                   _focus={{ boxShadow: "outline" }}
                   variant="ghost"
@@ -141,27 +138,38 @@ export default function NavigationBar() {
                   Tentang Kami
                 </Button>
               </NextLink>
-            </Center>
-            <Center w="100%"h="24px">
-              <NextLink href="/daftar" passHref>
+           
+              <NextLink href="#keuntungan" passHref>
                 <Button
                   as="a"
                   fontSize={16}
-                  aria-label="visi-misi"
+                  aria-label="tentang"
                   _hover={{ bg: "whiteAlpha.400" }}
                   _focus={{ boxShadow: "outline" }}
                   variant="ghost"
                 >
-                  Pendaftaran
+                  Keuntungan
                 </Button>
               </NextLink>
-            </Center>
-            <Center w="100%"h="24px">
-              <NextLink href="/contact" passHref>
+           
+              <NextLink href="#program" passHref>
                 <Button
                   as="a"
                   fontSize={16}
-                  aria-label="visi-misi"
+                  aria-label="program"
+                  _hover={{ bg: "whiteAlpha.400" }}
+                  _focus={{ boxShadow: "outline" }}
+                  variant="ghost"
+                >
+                 Program
+                </Button>
+              </NextLink>
+           
+              <NextLink href="#kontak" passHref>
+                <Button
+                  as="a"
+                  fontSize={16}
+                  aria-label="kontak"
                   _hover={{ bg: "whiteAlpha.400" }}
                   _focus={{ boxShadow: "outline" }}
                   variant="ghost"
@@ -169,7 +177,6 @@ export default function NavigationBar() {
                  Kontak
                 </Button>
               </NextLink>
-            </Center>
           </VStack>
         </Box>
       ) : null}

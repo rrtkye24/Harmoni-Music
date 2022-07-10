@@ -105,7 +105,7 @@ function Judul() {
 }
 export default function Program() {
     return (
-        <Box className='png'>
+        <Box className='png' id='program'>
             <Judul />
             <Carousel />
         </Box>

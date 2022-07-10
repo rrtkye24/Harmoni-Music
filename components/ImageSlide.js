@@ -15,9 +15,9 @@ import Browsur from "./Browsur"
 export default function WithBackgroundImage() {
     return (
         <Flex
+            id="intro"
             w={"full"}
             p='20'
-            // h={"100vh"}
             backgroundImage={{ base: 'url("/img/mobile.jpg")', md: 'url("/img/thumbnail6.jpg")' }}
             backgroundSize={"cover"}
             backgroundPosition={"center center"}
@@ -41,7 +41,7 @@ export default function WithBackgroundImage() {
                             color={"white"}
                             fontWeight={200}
                             lineHeight={6.9}
-                            fontSize={useBreakpointValue({ base: "xl", md: "4xl" })}
+                            fontSize={useBreakpointValue({ base: "16", md: "4xl" })}
                             align={"center"}
                         >
                             your best music skill partner

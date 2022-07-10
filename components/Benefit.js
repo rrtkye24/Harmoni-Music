@@ -84,7 +84,7 @@ const Icons = ({
 
 export default function Benefit() {
     return (
-        <Box p={10} className='jpg'>
+        <Box p={10} className='jpg' id="keuntungan">
             <Center>
                 <Box bg={useColorModeValue('whiteAlpha.600', 'whiteAlpha.700')} rounded="50px" boxShadow={'2xl'}>
                     <Container maxW={'5xl'} py={16} as={Stack} spacing={12}>
