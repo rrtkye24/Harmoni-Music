@@ -86,7 +86,7 @@ export default function Benefit() {
     return (
         <Box p={10} className='jpg'>
             <Center>
-                <Box bg={useColorModeValue('whiteAlpha.600', 'whiteAlpha.700')} rounded="50px">
+                <Box bg={useColorModeValue('whiteAlpha.600', 'whiteAlpha.700')} rounded="50px" boxShadow={'2xl'}>
                     <Container maxW={'5xl'} py={16} as={Stack} spacing={12}>
                         <Stack spacing={0} align={'center'}>
                             <Heading>Mengapa harus belajar di Harmony Music ?</Heading>

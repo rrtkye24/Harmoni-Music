@@ -31,7 +31,7 @@ function NavButton({ href, text }) {
         color="black"
         _hover={{ bg: "whiteAlpha.400" }}
         _focus={{ boxShadow: "outline" }}
-        my={2}
+        my={4}
       >
         {text}
       </Button>
@@ -64,7 +64,7 @@ export default function NavigationBar() {
       as="nav"
       w="100%"
       px="6"
-      py=""
+      py="1"
       mr={4}
       zIndex={9999}
       align="center"

@@ -7,7 +7,8 @@ import {
     useBreakpointValue,
     Center,
     Box,
-    HStack
+    HStack,
+    Link
 } from "@chakra-ui/react"
 import { AiOutlineWhatsApp, AiOutlineArrowDown } from "react-icons/ai"
 import Browsur from "./Browsur"
@@ -15,8 +16,9 @@ export default function WithBackgroundImage() {
     return (
         <Flex
             w={"full"}
-            h={"100vh"}
-            backgroundImage={'url("/img/thumbnail6.jpg")'}
+            p='20'
+            // h={"100vh"}
+            backgroundImage={{ base: 'url("/img/mobile.jpg")', md: 'url("/img/thumbnail6.jpg")' }}
             backgroundSize={"cover"}
             backgroundPosition={"center center"}
         >
@@ -51,19 +53,23 @@ export default function WithBackgroundImage() {
                     <HStack justifyContent={'center'} align={'center'}>
                         <Flex direction={{ base: "column", md: "row" }} py={{ base: "0", md: "0" }}>
                             <Box mt={4}>
-                                <Button
-                                    bg={"blackAlpha.800"}
-                                    rounded={"full"}
-                                    color={"whiteAlpha.700"}
-                                    _hover={{ bg: "green.600" }}
-                                    href="/#katasambutan"
-                                    p={6}
+                                <Link
+                                    href="https://wa.me/6281271886601?text=Hallo%20,saya%20telah%20mengunjungi%20website%20Harmony%20Music%20dan%20tertarik%20untuk%20mendaftar%20dan%20bergabung%20bersama%20Harmony%20Music"
+                                    target="_blank"
                                 >
-                                    <AiOutlineWhatsApp size={32} /> <b /> Daftar Sekarang
-                                </Button>
+                                    <Button
+                                        bg={"blackAlpha.800"}
+                                        rounded={"full"}
+                                        color={"whiteAlpha.700"}
+                                        _hover={{ bg: "green.600" }}
+                                        p={6}
+                                    >
+                                        <AiOutlineWhatsApp size={32} /> <b /> Daftar Sekarang
+                                    </Button>
+                                </Link>
                             </Box>
                             <Box mt={4}>
-                                <Browsur/>
+                                <Browsur />
                             </Box>
                         </Flex>
                     </HStack>

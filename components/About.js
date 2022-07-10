@@ -11,7 +11,9 @@ import {
     useColorModeValue,
     Button,
     Stack,
-    Container
+    Container,
+    SimpleGrid,
+    Heading
 } from "@chakra-ui/react"
 import { AiOutlineWhatsApp, AiOutlineArrowDown } from "react-icons/ai"
 import NextLink from "next/link"
@@ -24,49 +26,36 @@ function Video() {
         }, 5000)
     }, []);
     return (
-        <video
-            ref={videoRef}
-            controls
-            width="250"
-            loop
-            muted
-            style={{}}>
-            <source src='/video/harmony.mp4' />
-        </video>
+        <Stack direction={['column', 'row']} p='5'>
+            <Box w='25  0px'>
+                <video
+                    ref={videoRef}
+                    controls
+                    loop
+                    muted
+                    style={{}}>
+                    <source src='/video/harmony.mp4' />
+                </video>
+            </Box>
+            <Box align='center' lineHeight={2.4}>
+                <Heading>Sedikit Cerita</Heading>
+                <Text mt={10} fontSize={{base: 12, md: 18}}>Harmony music baru dirintis pada tahun 2022 dan ditempatkan di Kota Bengkulu Sumatera, tujuan dari adanya les musik ini untuk membentuk, mengembangkan, dan melatih skill musikalitas dan akan sangat menjamin kualitas musikalitas anda </Text>
+            </Box>
+        </Stack>
     )
 }
 function Tentangkami() {
     return (
-        <HStack>
-            <Box ml={20}>
-                <Video />
-            </Box>
-            <Box
-                id="tentang"
-                w={{ base: "100%", md: "50%", lg: "80%" }}
-                //   h={{ base: "100%", md: "50%" }}
-                align=""
-                role={'group'}
-                p={8}
-                // maxW={'330px'}
-                bg={useColorModeValue('white', 'gray.800')}
-                boxShadow={'2xl'}
-                rounded={'lg'}
-                pos={'relative'}
-                direction={{ base: 'row', lg: 'row' }}
-                zIndex={1}
-            >
-                <HStack>
-                    <Text fontSize="20" color="black">
-                        Metode mengajar saya adalah praktek, tidak basa basi, interaktif dan kreatif,
-                        kembali mengaransemen lagu yang diajarkan supaya belajar tidak membosankan.
-                        Evaluasi yang akan dilihat adalah murid harus bisa intens upload hasil belajar mereka di konten youtube mereka dengan
-                        begitu, murid akan semakin percaya diri.
-                    </Text>
-                    <Image alt='' width={300} src='/img/logo.png' />
-                </HStack>
-            </Box>
-        </HStack>
+        <Box p='10' bg={useColorModeValue('white', 'gray.800')}
+            boxShadow={'2xl'}
+            rounded={'lg'}>
+            <Text fontSize={{ base: '16', md: "20" }} color="black" fontWeight={600} align='center'>
+                Metode mengajar saya adalah praktek, tidak basa basi, interaktif dan kreatif,
+                kembali mengaransemen lagu yang diajarkan supaya belajar tidak membosankan.
+                Evaluasi yang akan dilihat adalah murid harus bisa intens upload hasil belajar mereka di konten youtube mereka dengan
+                begitu, murid akan semakin percaya diri.
+            </Text>
+        </Box>
     )
 }
 export default function About() {
@@ -74,19 +63,18 @@ export default function About() {
         <Box p={10} className='png'>
             <Center>
                 <Box>
-                    <Container maxW={'5xl'}  as={Stack} spacing={5}>
+                    <Container maxW={'5xl'} as={Stack} spacing={5}>
                         <Center>
-                            <Text className='typing-demo' fontSize="38" color="whiteAlpha.700" fontWeight="bold">
+                            <Text className='typing-demo' fontSize={{ base: 28, md: 38 }} color="whiteAlpha.700" fontWeight="bold">
                                 Tentang Harmony Music
                             </Text>
                         </Center>
-                        <Flex
-                            justify={"center"}
-                            id="tentangkami"
-                            p={6}
-                        >
-                            <Tentangkami />
-                        </Flex>
+                        <Box bg={useColorModeValue('white', 'gray.800')}
+                            boxShadow={'2xl'}
+                            rounded={'lg'}>
+                            <Video />
+                        </Box>
+                        <Tentangkami />
                         <Center>
                             <Button
                                 bg={"green.300"}
