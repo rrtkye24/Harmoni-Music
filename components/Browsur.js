@@ -34,7 +34,7 @@ export function Browsur() {
                 <ModalContent>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Image alt='' src={'img/browsur.jpeg'} width={300} height={300} />
+                        <Image alt='' src={'img/browsur.jpg'} width={300} height={300} />
                     </ModalBody>
 
                     <ModalFooter>

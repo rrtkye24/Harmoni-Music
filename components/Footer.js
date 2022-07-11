@@ -92,7 +92,11 @@ export default function Footer() {
                                 />
                                 <HStack mt='3'>
                                     <MdLocationOn size={24} />
-                                    <Text as='b'> Jl. Jambu Remaja No.65 RT.024 RW.008 Kota Bengkulu</Text>
+                                    <Text as='b'> Gerbang Belakang UIN Stain Kota Bengkulu</Text>
+                                </HStack>
+                                <HStack mt='3'>
+                                    <MdLocationOn size={24} />
+                                    <Text as='b'> Gereja Pentakosta Indonesia Bengkulu</Text>
                                 </HStack>
                             </Box>
                         </Stack>
