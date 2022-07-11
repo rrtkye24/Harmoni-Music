@@ -16,7 +16,7 @@ function MetaHeader() {
     url: "https://www.gspdi.com",
     title: "Harmony Music",
     description:
-      "Kursus Musik Online | Belajar Musik Online | Les Musik Online | Sekolah Musik Online | Tirando Music Education Ahlinya : 0812-7188-6601 (WA). ",
+      "Kursus Musik Online | Belajar Musik Online | Les Musik Online | Sekolah Musik Online | Harmony Music Ahlinya : 0812-7188-6601 (WA). ",
   }
   return (
     <NextSeo
