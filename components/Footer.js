@@ -96,6 +96,10 @@ export default function Footer() {
                                 </HStack>
                                 <HStack mt='3'>
                                     <MdLocationOn size={24} />
+                                    <Text as='b'> Gerbang Belakang UIN Stain Kota Bengkulu</Text>
+                                </HStack>
+                                <HStack mt='3'>
+                                    <MdLocationOn size={24} />
                                     <Text as='b'> Gereja Pentakosta Indonesia Bengkulu</Text>
                                 </HStack>
                             </Box>
