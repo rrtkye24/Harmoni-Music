@@ -47,7 +47,8 @@ export function Browsur() {
                             </Button>
                         </Link>
                         <Link
-                        href='#program'
+                            href='#program'
+                            legacyBehavior
                         >
                         <Button variant='ghost'>Pilih Instrument</Button>
                         </Link>
