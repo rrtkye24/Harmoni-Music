@@ -140,7 +140,7 @@ export default function Benefit() {
                                 <TestimonialContent>
                                     <TestimonialHeading>All Age</TestimonialHeading>
                                     <TestimonialText>
-                                        Terbuka untuk semua usia baik anak-anak, remaja, maupun dewasa
+                                        Terbuka untuk anak usia 5 tahun sampai usia dewasa
                                     </TestimonialText>
                                 </TestimonialContent>
                                 <Icons icon={<FaUserFriends size={38} />} />

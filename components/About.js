@@ -40,7 +40,7 @@ function Video() {
             </Box>
             <Box align='center' lineHeight={2.4}>
                 <Heading>Sedikit Cerita</Heading>
-                <Text mt={10} fontSize={{ base: 12, md: 18 }}>Harmony music baru dirintis pada tahun 2022 dan ditempatkan di Kota Bengkulu Sumatera, tujuan dari adanya les musik ini untuk membentuk, mengembangkan, dan melatih skill musikalitas dan akan sangat menjamin kualitas musikalitas anda </Text>
+                <Text mt={10} fontSize={{ base: 12, md: 18 }}>Harmony music baru dirintis pada tahun 2022 dan ditempatkan di Kota Bengkulu, tujuan dari adanya les musik ini untuk membentuk, mengembangkan, dan melatih skill musikalitas dan akan sangat menjamin kualitas musikalitas anda </Text>
             </Box>
         </Stack>
     )
