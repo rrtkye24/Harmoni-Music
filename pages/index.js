@@ -6,7 +6,6 @@ import ImageSlider from '../components/ImageSlide'
 import About from "../components/About"
 import Benefit from "../components/Benefit"
 import Program from "../components/Program"
-import Browsur from "../components/Browsur"
 import Contact from "../components/Kontak"
 import Footer from "../components/Footer"
 import { FaAngleUp } from 'react-icons/fa';
@@ -17,8 +16,7 @@ function MetaHeader() {
     url: "https://www.gspdi.com",
     title: "Harmony Music",
     description:
-      "To love one another in Christ, to empower and unify youths in local churches. " +
-      "Biro Pemuda dan Anak Hamba Tuhan Gereja Sidang Pantekosta Di Indonesia.",
+      "Kursus Musik Online | Belajar Musik Online | Les Musik Online | Sekolah Musik Online | Tirando Music Education Ahlinya : 0812-7188-6601 (WA). ",
   }
   return (
     <NextSeo
