@@ -97,18 +97,18 @@ export default function Benefit() {
                             spacing={{ base: 8, md: 4, lg: 8 }}>
                             <Testimonial>
                                 <TestimonialContent>
-                                    <TestimonialHeading>Free Trial 2x</TestimonialHeading>
+                                    <TestimonialHeading>Free Trial 1x</TestimonialHeading>
                                     <TestimonialText>
-                                        Uji coba belajar secara gratis sebanyak 2 kali
+                                        Uji coba belajar secara gratis sebanyak 1 kali
                                     </TestimonialText>
                                 </TestimonialContent>
                                 <Icons icon={<FcNews size={38} />} />
                             </Testimonial>
                             <Testimonial>
                                 <TestimonialContent>
-                                    <TestimonialHeading>50% OFF</TestimonialHeading>
+                                    <TestimonialHeading>10% OFF</TestimonialHeading>
                                     <TestimonialText>
-                                        diskon biaya pendaftaran sebesar 50% sampai akhir July 2022
+                                        diskon biaya pendaftaran sebesar 10% sampai akhir Agustus 2022
                                     </TestimonialText>
                                 </TestimonialContent>
                                 <Icons icon={<TbDiscount2 size={38} />} />
