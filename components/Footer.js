@@ -119,10 +119,10 @@ export default function Footer() {
                                         <ListHeader>@harmonymusic_bengkulu</ListHeader>
                                     </Flex>
                                     <Flex>
-                                        <SocialButton label={"Gmail"} href={"/"}>
+                                        <SocialButton label={"Gmail"} href={"mailto:Nazariahutabarat213"}>
                                             <AiOutlineMail size={32} />
                                         </SocialButton>
-                                        <ListHeader>harmonymusic@gmail.com</ListHeader>
+                                        <ListHeader>Nazariahutabarat213@gmail.com</ListHeader>
                                     </Flex>
                                     <Flex>
                                         <SocialButton label={"YouTube"} href={"/"}>
